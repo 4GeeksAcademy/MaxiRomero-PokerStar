@@ -18,10 +18,10 @@ const cardNumbers = [
   "A"
 ];
 const cardSuits = [
-  "src/images/trebol.jpg",
-  "src/images/diamante.jpg",
-  "src/images/corazon.jpg",
-  "src/images/picas.jpg"
+  "src/img/trebol.jpg",
+  "src/img/diamante.jpg",
+  "src/img/corazon.jpg",
+  "src/img/picas.jpg"
 ];
 
 // Encontrar elementos en el DOM
@@ -40,9 +40,6 @@ const adjustTextSize = () => {
   number.style.fontSize = `${fontSize}px`;
 };
 
-adjustTextSize();
-window.addEventListener("resize", adjustTextSize);
-
 // Generar una carta aleatoria
 const obtainRandomElement = arr => arr[Math.floor(Math.random() * arr.length)];
 
@@ -55,8 +52,8 @@ function generateRandomCard() {
   suitDown.src = cardSuit;
 
   if (
-    cardSuit === "src/images/diamante.jpg" ||
-    cardSuit === "src/images/corazon.jpg"
+    cardSuit === "src/img/diamante.jpg" ||
+    cardSuit === "src/img/corazon.jpg"
   ) {
     number.style.color = "red";
   } else {
@@ -69,34 +66,6 @@ window.onload = () => {
 };
 
 document.getElementById("button").addEventListener("click", generateRandomCard);
-
-// Ajustar dimensión de la carta
-const resizeHandle = document.getElementById("resize-handle");
-let isResizing = false;
-
-resizeHandle.addEventListener("mousedown", e => {
-  isResizing = true;
-  document.addEventListener("mousemove", resize);
-  document.addEventListener("mouseup", stopResize);
-});
-
-function resize(e) {
-  if (isResizing) {
-    const newWidth = e.clientX - naipe.offsetLeft;
-    const newHeight = e.clientY - naipe.offsetTop;
-
-    naipe.style.width = `${newWidth}px`;
-    naipe.style.height = `${newHeight}px`;
-
-    adjustTextSize();
-  }
-}
-
-function stopResize() {
-  isResizing = false;
-  document.removeEventListener("mousemove", resize);
-  document.removeEventListener("mouseup", stopResize);
-}
 
 // Fijamos el intervalo en 10 segundos:
 

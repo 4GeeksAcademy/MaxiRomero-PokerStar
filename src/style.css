@@ -1,13 +1,13 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
 #naipe {
-  width: 420px;
-  height: 640px;
+  width: 400px;
+  height: 580px;
   display: flex;
   flex-direction: column;
   font-size: 100%;
-  background-color: white;
-  border-radius: 4%;
+  background-color: rgb(254, 254, 254);
+  border-radius: 5%;
   position: relative;
 }
 
@@ -35,14 +35,7 @@
   width: auto;
 }
 
-.resize-handle {
-  width: auto;
-  height: auto;
-  color: white;
-  font-size: 150%;
-  position: absolute;
-  right: -30px;
-  bottom: -30px;
-  cursor: se-resize;
-  padding: 2px 4px;
+.fondo {
+  background-color: green;
+  margin-top: 5px;
 }

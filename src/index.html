@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Random Card Generator</title>
+    <title>Pokerstar</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -20,17 +20,17 @@
       }
     </style>
   </head>
-  <body>
+  <body class="fondo">
     <div
       id="principal"
-      class="container-fluid d-flex justify-content-center align-items-center flex-column vh-100 mx-auto"
+      class="container-fluid d-flex justify-content-center align-items-center flex-column vh-100 mx-auto "
     >
       <div id="naipe" class="bg-white">
         <div
           id="paloArriba"
           class="d-flex justify-content-start align-items-center h-25 ms-4"
         >
-          <img src="src/img/trebol.jpg" alt="Suit of the card" id="suitUp" />
+          <img src="src/img/diamante.jpg" alt="Suit of the card" id="suitUp" />
         </div>
         <div
           id="numero"
@@ -42,15 +42,16 @@
           id="paloAbajo"
           class="d-flex justify-content-start align-items-center h-25 me-4"
         >
-          <img src="src/img/trebol.jpg" alt="Suit of the card" id="suitDown" />
-        </div>
-        <div id="resize-handle" class="resize-handle">
-          <i class="fa-solid fa-maximize"></i>
+          <img
+            src="src/img/diamante.jpg"
+            alt="Suit of the card"
+            id="suitDown"
+          />
         </div>
       </div>
       <div class="my-5">
-        <button type="button" class="btn btn-warning" id="button">
-          Give me another card
+        <button type="button" class="btn btn-success" id="button">
+          Dame una nueva carta
         </button>
       </div>
     </div>

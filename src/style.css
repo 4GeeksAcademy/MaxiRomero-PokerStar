@@ -1,1 +1,48 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+#naipe {
+  width: 420px;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  font-size: 100%;
+  background-color: white;
+  border-radius: 4%;
+  position: relative;
+}
+
+#numero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+#textoNumero {
+  font-size: calc(6vh + 6vw);
+  margin: 0;
+}
+
+#paloAbajo {
+  transform: rotate(180deg);
+}
+
+#paloArriba img,
+#paloAbajo img {
+  max-height: 60%;
+  max-width: 60%;
+  height: auto;
+  width: auto;
+}
+
+.resize-handle {
+  width: auto;
+  height: auto;
+  color: white;
+  font-size: 150%;
+  position: absolute;
+  right: -30px;
+  bottom: -30px;
+  cursor: se-resize;
+  padding: 2px 4px;
+}
